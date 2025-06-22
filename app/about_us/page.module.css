@@ -3,3 +3,11 @@
   width: 100vw;
   height: 100vh;
 }
+
+.ourPartnerDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 90px;
+    margin: 80px 0 80px 90px;
+}
