@@ -7,7 +7,7 @@ export const CrewMember = ({name, description, image}) => {
             <p>
                 {name}: {description}
             </p>
-            <img src={`/crew/${image}`} alt={name} style={{ width: '300px', height: 'auto' }}/>
+            <img src={`/crew/${image}`} alt={name} className="crew-img"/>
         </div>
     )
 };

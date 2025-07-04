@@ -1,9 +1,8 @@
 "use client"
-import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link'
 
 import styles from './Navbar.module.css';
+import NavItem from '../navbar/NavItem';
 
 const navbarItems = [
   {
@@ -19,6 +18,7 @@ const navbarItems = [
     link: '/nasa_collaboration',
   }
 ];
+let index = 0;
 
 export const Navbar = () => {
   const currentPath = usePathname()
@@ -32,24 +32,24 @@ export const Navbar = () => {
       <nav className={styles.navbar}>
         <div className={styles.navbarBG} />
         <ul className={styles.navbarList}>
-          {/* TASK - React 1 week 2 */}
-          {/* Create a <NavItem> component, which accepts the following:  */}
-          {/* title, link, isActive  */}
-          <li className={classNames(styles.navbarLinks, {
-            [styles.isLinkActive]: navbarItems[0].link === currentPath,
-          })}>
-            <Link href={navbarItems[0].link}><b>01</b> {navbarItems[0].title}</Link>
-          </li>
-          <li className={classNames(styles.navbarLinks, {
-            [styles.isLinkActive]: navbarItems[1].link === currentPath,
-          })}>
-            <Link href={navbarItems[1].link}><b>02</b> {navbarItems[1].title}</Link>
-          </li>
-          <li className={classNames(styles.navbarLinks, {
-            [styles.isLinkActive]: navbarItems[2].link === currentPath,
-          })}>
-            <Link href={navbarItems[2].link}><b>03</b> NASA COLLABORATION</Link>
-          </li>
+          <NavItem
+            title={navbarItems[0].title}
+            link={navbarItems[0].link}
+            index={"01"}
+            isActive={navbarItems[0].link === currentPath}
+          />
+          <NavItem
+            title={navbarItems[1].title}
+            link={navbarItems[1].link}
+            index={"02"}
+            isActive={navbarItems[1].link === currentPath}
+          />
+          <NavItem
+            title={navbarItems[2].title}
+            link={navbarItems[2].link}
+            index={"03"}
+            isActive={navbarItems[2].link === currentPath}
+          />
           {/* TASK - React 1 week 3 */}
           {/* replace repeating content by using navbarItems.map(() => <NavLink />) */}
         </ul>
