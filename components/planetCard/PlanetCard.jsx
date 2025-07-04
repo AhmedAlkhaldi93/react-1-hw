@@ -17,5 +17,3 @@ export const Planet = ({name, description, thumbnail, isSelected, onAddOrRemoveP
         </div>
     )
 };
-
-export default Planet;
