@@ -1,6 +1,6 @@
 import "./socialMediaItem.css"
 
-const SMItem = ({url, title, icon}) => {
+export const SMItem = ({url, title, icon}) => {
     return (
         <li>
             <img src={`/socialmedia/${icon}`} alt={title} className="socialMediaItem"/>
@@ -10,6 +10,3 @@ const SMItem = ({url, title, icon}) => {
         </li>
     )
 };
-
-export default SMItem;
-

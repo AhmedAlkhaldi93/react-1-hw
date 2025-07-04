@@ -3,8 +3,8 @@
 import { useState } from 'react';
 
 import styles from '@/components/destination/destination.module.css';
-import PlanetWishlistItem from '@/components/destination/PlanetWishlistItem';
-import Planet from '@/components/planetCard/PlanetCard';
+import { PlanetWishlistItem } from '@/components/destination/PlanetWishlistItem';
+import {Planet} from '@/components/planetCard/PlanetCard';
 
 
 export const Destinations = () => {
@@ -69,7 +69,7 @@ export const Destinations = () => {
           
           <Planet
           name="Moon"
-          description="Mars, the Red Planet, is a barren yet fascinating world with vast deserts, towering volcanoes, and the deepest canyon in the solar system. As humanity’s next frontier, Mars invites us to dream of colonization and the possibilities of life beyond Earth."
+          description="Our closest celestial neighbor, the Moon, is a silent witness to Earth's history. With its stunning craters and desolate landscapes, the Moon offers a unique glimpse into space exploration's past and future, making it a perfect destination for lunar adventurers."
           thumbnail="image-moon.png"
           isSelected={selectedPlanets.includes("Moon")}
           onAddOrRemovePlanet={onAddOrRemovePlanet}
@@ -77,7 +77,7 @@ export const Destinations = () => {
 
           <Planet
           name="Mars"
-          description="Our closest celestial neighbor, the Moon, is a silent witness to Earth's history. With its stunning craters and desolate landscapes, the Moon offers a unique glimpse into space exploration's past and future, making it a perfect destination for lunar adventurers."
+          description="Mars, the Red Planet, is a barren yet fascinating world with vast deserts, towering volcanoes, and the deepest canyon in the solar system. As humanity’s next frontier, Mars invites us to dream of colonization and the possibilities of life beyond Earth."
           thumbnail="image-mars.png"
           isSelected={selectedPlanets.includes("Mars")}
           onAddOrRemovePlanet={onAddOrRemovePlanet}

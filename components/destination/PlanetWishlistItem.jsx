@@ -1,7 +1,7 @@
 import styles from './destination.module.css';
 
 
-const PlanetWishlistItem = ({
+export const PlanetWishlistItem = ({
   name,
   onRemove,
   thumbnail,
@@ -13,6 +13,4 @@ const PlanetWishlistItem = ({
       <button onClick={onRemove}>remove</button>
     </div>
   );
-}
-
-export default PlanetWishlistItem;
+};
